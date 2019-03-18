@@ -13,3 +13,11 @@
 
 # Beolvasás
 Svr.raw <- read.table("Raw/Sárvár10p2017novtol.txt", sep = "\t", skip = 1, stringsAsFactors = FALSE)
+
+Svr.date <- as.POSIXct(Svr.raw$V1)
+
+plot(Svr.date, Svr.raw$V2, type="l") #Hőm.
+plot(Svr.date, Svr.raw$V3, type="l") #RH
+plot(Svr.date, Svr.raw$V4, type="l") #Szél m/s
+plot(Svr.date, Svr.raw$V11, type="l") #Csap. mm
+plot(Svr.date, Svr.raw$V12, type="l") #Csap. int. mm/h
